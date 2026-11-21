@@ -20,7 +20,7 @@ If you used the bundled extension, the Git install keeps the same extension ID a
 
 ## Develop
 
-Use the Elixir and Erlang versions in `.tool-versions`:
+Use the Elixir and Erlang/OTP versions in the [CI workflow](.github/workflows/ci.yml):
 
 ```sh
 export MIX_ENV=test
