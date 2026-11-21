@@ -13,11 +13,17 @@ jobs:
     runs-on: ubuntu-latest
     env:
       MIX_ENV: test
+    defaults:
+      run:
+        working-directory: extension
     steps:
       - uses: actions/checkout@v4
+        with:
+          path: extension
       - uses: erlef/setup-beam@v1
         with:
-          version-file: .tool-versions
+          otp-version: '29.1.2'
+          elixir-version: '1.20.5-otp-29'
           version-type: strict
       - run: mix deps.get
       - run: mix format --check-formatted
