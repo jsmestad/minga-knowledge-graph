@@ -14,6 +14,11 @@ defmodule MingaKnowledgeGraph.MixProject do
       description:
         "Personal knowledge graph: tracks what you know and briefs you on what you don't",
       source_url: @source_url,
+      package: [
+        licenses: ["MIT"],
+        links: %{"GitHub" => @source_url},
+        files: ~w(lib mix.exs README.md LICENSE)
+      ],
       elixirc_paths: elixirc_paths(Mix.env())
     ]
   end
@@ -27,7 +32,7 @@ defmodule MingaKnowledgeGraph.MixProject do
 
   defp deps do
     [
-      {:minga_sdk, "~> 0.1", only: [:dev, :test], runtime: false},
+      {:minga_sdk, "~> 0.1.1", only: [:dev, :test], runtime: false},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
